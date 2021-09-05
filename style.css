@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+/*<<<<<<<<<<<<<<< Navigation >>>>>>>>>>>>>>>*/
+
+nav{
+    /* background-color: lightcoral; */
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed; */
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    font-size: 1.2em;
+    
+}
+
+nav .logo h1 a{
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    
+}
+
+nav .mainMenu{
+    display: flex;
+    list-style: none;
+    flex: 2;
+    justify-content: space-around;
+    
+}
+
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav .mainMenu li a:hover{
+    background-color: #f1f3f4;
+    border-radius: 18px;
+}
+
+nav .openMenu{
+    font-size: 1.3rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i{
+    font-size: 1.3rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-facebook:hover {color: rgb(0, 110, 255);}
+.fa-twitter:hover {color: rgb(86, 154, 243);}
+.fa-instagram:hover {color: rgb(255, 0, 191);}
+.fa-github:hover {color: rgb(255, 123, 0);}
+
+/*<<<<<<<<<<<<<<< Navigation for Mobile >>>>>>>>>>>>>>>*/
+
+@media(max-width: 800px){
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background: white;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu{
+        display: block;
+    }
+
+    nav .mainMenu li a:hover {
+        background: #f1f3f4;
+        font-size: 1.6rem;
+    }
+
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
+
+/*<<<<<<<<<<<<<<< Home section >>>>>>>>>>>>>>>*/
+
+.main-section{
+    height: 90vh;
+    background-image: url("https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+    
+}
+
+.main{
+    position: absolute;
+    top: 30vh;
+    left: 45vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+}
+
+.main span{
+    font-size: 4rem;
+}
+
+.main h3{
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main p{
+    margin-top: 0.7em;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    width: 180px;
+    padding: 0.5em 0.8em;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    border: 1px solid black;
+    margin-top: 0.8em;
+    font-weight: 550;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.main a:hover{
+    background-color: #babdbe;
+    color: black;
+    
+}
+
+/*<<<<<<<<<<<<<<< Events section >>>>>>>>>>>>>>>*/
+
+.events-section{
+    height: vh;
+    padding: 25px;
+}
+
+.container{
+    background-color: #ebecf0;
+    display: flex;
+    align-items: center;
+}
+
+.events-section-left{
+    flex: 1;
+}
+
+.events-section-right{
+    flex: 2;
+}
+
+.events-content{
+    display: flex;
+    flex-direction: column;
+}
+.events-section-right .events-text h2{
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+.events-text p{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+.events-section-left img{
+    height: auto;
+    padding: 0.8em;
+    max-width: 80%;
+    margin: 2em;
+
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+}
+
+.events-section-right .events-btn{
+    text-decoration: none;
+    background-color: white;
+    font-size: 1.1rem;
+    border: 1px solid black;
+    margin-top: 0.3em;
+    padding: 0.4em 0.8em;
+    color: black;
+    margin-bottom: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.events-section-right .events-btn:hover{
+    background-color: #d3d3d3;
+}
+
+#events-register{
+    margin-left: 0.6em;
+}
+
+/*<<<<<<<<<<<<<<< Sponsors section >>>>>>>>>>>>>>>*/
+
+.sponsors-section{
+    height: 40vh;
+}
+
+.sponsors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sponsors-section h2{
+    margin: 1.2em;
+    font-size: 2.3rem;
+    margin-top: 0.3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.company{
+    height: 80px;
+}
+
+#pltr{
+    height: 50px;
+}
+
+#msft{
+    height: 60px;
+}
+
+/*<<<<<<<<<<<<<<< Footer section >>>>>>>>>>>>>>>*/
+
+.footer-section{
+    height: 50vh;
+    background-color: black;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+.email-input{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1.6em;
+
+}
+
+.email-input input{
+    font-size: 1rem;
+}
+
+.email-input button{
+    margin-left: 0.6em;
+    padding: 0.3em 0.5em;
+    font-family: 'Roboto', sans-serif;
+}
+.email h4{
+    color: white;
+    margin-top: 1em;
+    margin-left: 1.2em;
+    margin-bottom: 0.6em;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.footer-items{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer-subheadings{
+    color: gray;
+    margin-bottom: 0.3em;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0.8em;
+}
+
+.footer-list-items{
+    list-style: none;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.footer-list-items .subitems{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social{
+    position: absolute;
+    right: 1.5em;
+    display: flex;
+    width: 14%;
+    justify-content: space-evenly;
+
+}
+
+.social-item{
+    cursor: pointer;
+}
+
+/*<<<<<<<<<<<<<<< Mobile Main Design >>>>>>>>>>>>>>>*/
+
+@media screen and (max-width: 800px){
+    .main{
+        left: 10vw;
+
+    }
+    .main a{
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        width: 150px;
+        padding: 0.5em 0.8em;
+        font-size: 0.9rem;
+        display: flex;
+        margin-top: 0.8em;
+ 
+        
+    }
+
+    /*<<<<<< Events section >>>>>>*/
+
+    .events-section-left img{
+        display: none;
+    
+    }
+
+    .events-section-left{
+        flex: 0;
+    }
+    
+    .events-section-right{
+        flex: 1;
+        padding: 3px;
+    }
+
+    .sponsors{
+        flex-direction: column;
+       
+        
+    }
+
+    .sponsors-section{
+        height: auto;
+        
+    }
+
+    .company{
+        margin: 0.8em;
+        height: 52px;
+    }
+
+    #pltr{
+        height: 32px;
+    }
+    
+    #msft{
+        height: 42px;
+    }
+
+    #goog{
+        height: 60px;
+    }
+
+    /*<<<<<< Footers section >>>>>>*/
+
+    .footer-section{
+        height: 45vh;
+        
+    }
+
+    .footer-list-items .subitems{
+        display: none;
+    }
+
+    .footer-list-items{
+        display: none;
+    }
+
+
+    .footer-items{
+        flex-direction: column;
+        margin-top: 0.5em;
+        margin-bottom: 1.5em;
+        align-items: center;
+ 
+    }
+
+    .social{
+        position: absolute;
+        right: 1.5em;
+        top: 157em;
+        display: flex;
+        width: 12%;
+        justify-content: space-evenly;
+    }
+
+    .social-item{
+        margin: 0.5em;
+        cursor: pointer;
+    }
+}
